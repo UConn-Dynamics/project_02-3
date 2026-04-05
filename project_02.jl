@@ -18,14 +18,24 @@ end
 # ╔═╡ f17103ea-06bf-11f1-a2b0-79e68ed152eb
 md"""# Project_02 - Multibody kinematic modeling
 
-In this project, a rigid bar (L = 10 cm) is connected to two sliding pistons on ±45° diagonal tracks. The bar rotates at θ̇₃ = 2 rad/s.
+![Dual slider kinematics project](https://raw.githubusercontent.com/cooperrc/me5180-project_02/refs/heads/main/dual-slider.svg)
 
-**Generalized coordinates:** q = [x₁, y₁, θ₁, x₂, y₂, θ₂, x₃, y₃, θ₃]
+In this project, a rigid bar is connected to two sliding pistons along
+the diagonal tracks. As the pistons move along the tracks, the rigid bar rotates at a constant rate, $\dot{\theta}_3 = 2~rad/s$. The figure above has three _relative_ ccoordinate systems that move with the bodies:
 
-**Bodies:**
-- Body 1: Piston 1 on +45° track
-- Body 2: Piston 2 on −45° track
-- Body 3: Rigid bar (length L = 0.10 m)
+1. $x_1-y_1-$ describes piston 1 position and orientation, $\theta_1$
+2. $x_2-y_2-$ describes piston 2 position and orientation, $\theta_2$
+3. $x_3-y_3-$ describes the rigid bar position and orientation, $\theta_3$
+
+Each of the pistons are on tracks at $\pm 45^o$ and the rotating rigid
+bar is 10 cm. The hinges are mounted to the center of the pistons
+connecting the ends of the rigid bar. 
+ 
+In this project, you need to 
+
+1. determine constraint equations $C(\mathbf{q},~t)$
+2. solve for the velocities, $\dot{q}$ and accelerations, $\ddot{q}$
+3. visualize the motion of the system as the rigid bar goes through at least one full rotation
 """
 
 # ╔═╡ 6feb1feb-b277-4669-ae2b-930f34a280e1
@@ -1451,8 +1461,8 @@ version = "1.13.0+0"
 """
 
 # ╔═╡ Cell order:
-# ╠═f17103ea-06bf-11f1-a2b0-79e68ed152eb
-# ╠═d3b54280-3112-11f1-91a3-73fa08c1f185
+# ╟─f17103ea-06bf-11f1-a2b0-79e68ed152eb
+# ╟─d3b54280-3112-11f1-91a3-73fa08c1f185
 # ╟─6feb1feb-b277-4669-ae2b-930f34a280e1
 # ╟─d3b56990-3112-11f1-b479-af8a72383e10
 # ╟─d3b56990-3112-11f1-96f5-abcc29a374e2
