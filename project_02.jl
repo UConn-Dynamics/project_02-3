@@ -339,26 +339,6 @@ begin
     gif(anim, joinpath(homedir(), "Downloads", "dual_slider_animation.gif"), fps=30)
 end
 
-# ╔═╡ d3b590a0-3112-11f1-b859-83d909824489
-md"""
-## Summary
-
-| Quantity | Method |
-|----------|--------|
-| **Positions** q | Newton-Raphson on C(q,t) = 0 |
-| **Velocities** q̇ | Linear solve: Cq·q̇ = −Ct |
-| **Accelerations** q̈ | Linear solve: Cq·q̈ = γ |
-
-The γ (gamma) vector accounts for the centripetal acceleration terms arising from the rotating hinge connections:
-
-γ₅ = +(L/2)·cos(θ₃)·θ̇₃²  
-γ₆ = +(L/2)·sin(θ₃)·θ̇₃²  
-γ₇ = −(L/2)·cos(θ₃)·θ̇₃²  
-γ₈ = −(L/2)·sin(θ₃)·θ̇₃²  
-
-All other γ entries are zero (linear constraints have no higher-order terms).
-"""
-
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
@@ -1477,12 +1457,11 @@ version = "1.13.0+0"
 # ╟─d3b56990-3112-11f1-b479-af8a72383e10
 # ╟─d3b56990-3112-11f1-96f5-abcc29a374e2
 # ╠═d3b56990-3112-11f1-ab70-d9b8258b502d
-# ╠═ac1020ab-13c3-4122-864f-5bd340038f05
+# ╟─ac1020ab-13c3-4122-864f-5bd340038f05
 # ╠═d3b590a0-3112-11f1-ab4d-a93b5b741fdf
 # ╠═d3b590a0-3112-11f1-9e12-dda276d99226
 # ╠═d3b590a0-3112-11f1-8332-337f56e289a7
 # ╠═d3b590a0-3112-11f1-992a-2b014f822925
 # ╠═d3b590a0-3112-11f1-9199-fb62e86a402c
-# ╠═d3b590a0-3112-11f1-b859-83d909824489
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
